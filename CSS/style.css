@@ -22,6 +22,22 @@ body {
     box-sizing: border-box;
 }
 
+    /* global */
+.titles {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: capitalize;
+    color: #444;
+}
+
+.all-p {
+    font-size: 1.8rem;
+    padding: 0 5%;
+    font-weight: 300;
+}
+    /* Header section */
+
 .header {
     height: 95vh;
     background-image: linear-gradient(
@@ -46,19 +62,66 @@ body {
 .heading-primary--main {
     font-size: 6rem;
     text-transform: capitalize;
+    animation: moveInLeft 1s ease-out;
 }
 
 .heading-paragraph {
     font-size: 1.8rem;
     font-weight: 300;
+    animation: moveInRight 1s ease-out;
+}
+
+    /* header animation */
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+    /* BTN animation */
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
 }
 
 
-/* .heading-primary--sub {
-    font-size: 3rem;
-    text-transform: capitalize;
-    letter-spacing: .25rem;
-} */
+/* Call to action */
 
 .btn:link,
 .btn:visited {
@@ -66,7 +129,7 @@ body {
     text-decoration: none;
     padding: 1.5rem 4rem;
     display: inline-block;
-    border-radius: 10rem;
+    border-radius: .5rem;
     transition: all .2s;
     position: relative;
     font-size: 1.6rem;
@@ -108,4 +171,10 @@ body {
 .btn--animated { 
     animation: moveInBottom 1s ease-out .75s;
     animation-fill-mode: backwards;
+}
+
+    /* Our vision section */
+
+.section___our-vision {
+    margin-top: 5rem;
 }
